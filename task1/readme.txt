@@ -22,24 +22,27 @@ Part 1. Roundtrip Engineering :
 Question A.
 
 
-We compiled and ran the code of the project. We reviewed the code and the output, the 
-code performs a number of tests under "MainTest.java" on the two House objects - 
+We compiled and ran the code of the project, reviewed it and its outputs. The code 
+performs a number of tests under "MainTest.java" on the two House objects - 
 prints details on the state of the 2 houses by 2 methods.
 
-* First test (consists of two checks) - tests the possibility of renting the first of 
-the two "House" objects for half of the created "Customer" objects. For each "customer" 
-they check whether the house is rented or not. If so, a message is printed that the 
-house cannot be rented + the name of the current tenant. Otherwise, rents the "house" 
-to the first possible "customer" and prints a notice accordingly along with the 
-tenant's name. The same check is performed for the second "home" object, but for 
-the other devision of all existing "customers".
+* The first test (consists of two checks) - Iterates over the half of the existing 
+"Customers" and tests the possibility of renting the first of the two "House" objects.
+																					
+For each "customer" the test performs a check whether the house is rented or not. 
+If it is rented, a message is printed stating the house cannot be rented + the name 
+of the current tenant-client ("customer"). Otherwise, the system rents the "house" to the first 
+possible "customer" and prints a notice accordingly along with the tenant's name.
+The same check is performed for the second "home" object, but for the other half of 
+all existing "customers".
 
-* Second test - for each customer we check if he rents one or more of the two "houses". 
-If so, he terminates his lease on the "house" and leaves the house on "rented" status 
-(due to an incorrect code) and prints a notice of termination of the lease + the name 
-of the "customer". Otherwise, prints a message that the "house" was not rented to a 
-"customer" + the name of the "customer".
 
+* The second test - for each customer we check if he currently rents either one or 
+both of the "house" objects. If the "customer" indeed rents a house, the lease on 
+the house is terminated and the house's status remains as "rented" (due to incorrect 
+code) and a notice is printed regarding the termination of the lease + 
+the "customer"'s name. Otherwise, prints a message that the "house" 
+was not rented to the currently iterated "customer" + their name.
 
 ________________
 Question B.
@@ -103,10 +106,10 @@ Question E.
 We used a reverse-engineering technique in Visual Paradigm, and received new Class 
 Diagram Model2.vpp from the code which was generated in the section D (Code1.zip).
 
-We checked the diagram,  all the new and updated classes, connections appear 
-as they should. This Class Diagram is the same as what we got in section C as 
-expected. The minor change is the position of the classes in the diagram, which
-does not matter (visual design).
+We checked the diagram,  all the new and updated classes, relationships appear as 
+they should. This Class Diagram is the same as what we have got in section C as 
+expected. The minor changes occured in the way the diagram was display, however, 
+they don't matter logic wise (visual only) or change architecture in any way.
 
 The screenshot of the Model2.vpp is located in the Drive and called 
 q1_E_diagramFromGeneratedCode.jpg, the link is:
@@ -123,26 +126,30 @@ to the currency he prefers (for example, weights to dollars).
 In addition we also used the CityLodgeUI interface which returns a rental date 
 for houses and rooms.
 
-PhoneBook
-
 ________________
 Question B.
 
-At first, we ran a few queries and received multiple results that were not as we expected. 
-Almost all of these results had some kind of problems and were not good enogh for our 
-purposes and did not stand to the criteria. For example, many of the GitHub projects 
-do not have ReadMe files or any kind of explanation what is what and how it was done. 
-The commits, issues, forks, comments were missing as many of projects were uploaded at once.
-Also, there were heavy use of external complicated libraries, which we are not used to work with.
+At first, we ran a few queries and received multiple results that were not as 
+we expected. Almost all of the results had some kind of problems and were not good 
+enogh for our requirements and did not stand to the criteria( many of the GitHub 
+projects do not have ReadMe files or any kind of explanation about the code and how 
+it works). The commits, issues, forks, comments were lacking as many of projects 
+were uploaded all at once. Also, often there was heavy use of external complicated 
+libraries, API's and FrameWorks which we are not familiar with and require time 
+and skill effort.
 
-We ran three queries - a query for a currency exchange calculator interface and a query 
-for a room rental interface. We chose to display the best match results first. 
-The queries we ran on Github to get the desired products.
-For currency conversion calculator ("simple application convert currency java gui"),
-for room rental ("java room rental gui") and for additional room rental UI ("java simple swing gui").
+We ran two queries - a query for a currency exchange calculator interface 
+- The query: "simple application convert currency java gui" and a query for a room 
+rental interface 
+- The query: "java room rental gui" as well as: "java simple swing gui".
 
-The results obtained by running the queries could be seen in the Report in the Drive 
-(the link is provided at the beginning)
+We chose to display the result by "best match". The queries we ran on Github to get 
+the desired products.
+			
+
+The results obtained by running the queries could be seen in the Report in the Drive
+(the link is provided at the beginning and also below)
+https://docs.google.com/document/d/1F4IxUCQAJ4e5dGSHa8PQMIwsOcfTt1mzVAYAW7mhSKA/edit?usp=sharing																						
   ________________
 Question C. 
 
@@ -160,14 +167,19 @@ We tried other results, but they were not good enough (most were without visual
 interfaces and those that were were for unsuitable software)
 
 3. Room rental interface - The third product we chose was for room rental in a more specific manner. 
-We found a UI interface used for creating a simple phone book and converted it into an interface that allows room rentals. 
-This interface was convenient and visually easy to understand for the user and for our purposes.
-We looked for an interface capable of displaying multiple screens simultaneously.
-From the results we received, we saw that this outcome has:
-4-star - meaning there are at least four people who found the code useful and saved it as a favorite.
-8-fork - there are at least eight people who found interest in the code and decided to continue developing it in their own version.
-2 participants (watch) - meaning at least two people chose to follow the code's progress
-________________
+We found a UI interface used for creating a simple phone book and converted it into an interface 
+that allows room rentals. This interface was convenient and visually easy 
+to understand for user and for our purposes. We looked for an interface that capable 
+of displaying multiple screens simultaneously. From the results we received, we saw 
+that it has:
+4-star - meaning there are at least four people who found the code useful 
+and saved it as a favorite.
+8-fork - there are at least eight people who found interest in the code and 
+decided to continue developing it in their own version.
+2 participants (watch) - meaning at least two people chose to follow the code's 
+progress.
+Meaning it met our criteria requirements.
+______________
 
 Question D.
 
